@@ -56,7 +56,10 @@ const ItemsView = () => {
               <td>{item.profit}</td>
               <td>{item.saleDate}</td>
               <td className="mx-2">
-                <Link to={"/view-item/${item.id"} className="btn btn-secondary">
+                <Link
+                  to={`/view-item/${item.id}`}
+                  className="btn btn-secondary"
+                >
                   <FaEye />
                 </Link>
               </td>
