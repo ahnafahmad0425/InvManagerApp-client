@@ -46,9 +46,7 @@ const ItemsView = () => {
         <tbody className="text-center">
           {items.map((item, index) => (
             <tr key={item.id}>
-              <th scope="row" key={index}>
-                {index + 1}
-              </th>
+              <td>{item.id}</td>
               <td>{item.name}</td>
               <td>{item.status}</td>
               <td>{item.store}</td>
@@ -63,7 +61,10 @@ const ItemsView = () => {
                 </Link>
               </td>
               <td className="mx-2">
-                <Link to={"/edit-item/${item.id"} className="btn btn-secondary">
+                <Link
+                  to={`/edit-item/${item.id}`}
+                  className="btn btn-secondary"
+                >
                   <FaEdit />
                 </Link>
               </td>

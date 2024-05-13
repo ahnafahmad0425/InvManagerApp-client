@@ -6,6 +6,7 @@ import Home from "./Home";
 import NavBar from "./components/common/NavBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AddItem from "./components/item/AddItem";
+import EditItem from "./components/item/EditItem";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route exact path="/" element={<Home />}></Route>
           <Route exact path="/view-items" element={<ItemsView />}></Route>
           <Route exact path="/add-items" element={<AddItem />}></Route>
+          <Route exact path="/edit-item/:id" element={<EditItem />}></Route>
         </Routes>
       </Router>
     </main>
