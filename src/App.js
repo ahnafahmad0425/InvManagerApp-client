@@ -8,12 +8,19 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AddItem from "./components/item/AddItem";
 import EditItem from "./components/item/EditItem";
 import ItemProfile from "./components/item/ItemProfile";
+import React, { useState } from "react";
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
-    <main className="container mt-5">
+    <main className={`container mt-5 ${darkMode ? "dark-mode" : ""}`}>
       <Router>
-        <NavBar />
+        <NavBar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
           <Route exact path="/view-items" element={<ItemsView />}></Route>

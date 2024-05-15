@@ -1,0 +1,32 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}
+
+.navbar .navbar-items {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.dark-mode-button {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.dark-mode-button:hover {
+    background-color: white;
+    color: black;
+}
